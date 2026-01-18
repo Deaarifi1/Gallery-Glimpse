@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Collections | Art Gallery</title>
+
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/collections.css">
+
+</head>
+
+<script src="js/collections.js"></script>
+<body>
+
+<div class="header">
+  <div class="logo">LOGO</div>
+
+  <div class="nav-links">
+    <div class="home nav-item"><a href="index.html">Home</a></div>
+    <div class="product nav-item"><a href="product.html">Products</a></div>
+    <div class="contact nav-item"><a href="contact.html">Contact</a></div>
+  </div>
+
+  <div class="header-icons">
+    <div class="icon heart-icon">
+      <i class="fa-regular fa-heart" id="header-wishlist-icon"></i>
+      <span id="wishlist-count" class="count-badge">0</span>
+    </div>
+    <div class="icon user-icon">
+      <i class="fa-regular fa-user" id="header-user-icon"></i>
+    </div>
+    <div class="icon shopping-bag-icon">
+      <i class="fa-solid fa-bag-shopping" id="header-cart-icon"></i>
+      <span id="cart-count" class="count-badge">0</span>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <h1 class="page-title">All Collections</h1>
+  <p class="page-sub">Browse categories, open any painting, and add it to your favorites or cart.</p>
+
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<!-- overlays: favorites/cart/profile/painting (same storage as index) -->
+<div class="overlay-screen" id="favoritesOverlay" aria-hidden="true">
+  <div class="overlay-panel">
+    <div class="overlay-header">
+      <div class="overlay-title">Favorites <span class="badge" id="favCount">0</span></div>
+      <button class="overlay-close" type="button" data-close-overlay aria-label="Close">&times;</button>
+    </div>
+    <div class="overlay-body">
+      <div id="favoritesList" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));"></div>
+      <p id="favoritesEmpty" style="display:none;opacity:.75;margin-top:12px;">No favorites yet.</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay-screen" id="cartOverlay" aria-hidden="true">
+  <div class="overlay-panel">
+    <div class="overlay-header">
+      <div class="overlay-title">Cart <span class="badge" id="cartCount">0</span></div>
+      <button class="overlay-close" type="button" data-close-overlay aria-label="Close">&times;</button>
+    </div>
+    <div class="overlay-body">
+      <div id="cartList" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));"></div>
+      <p id="cartEmpty" style="display:none;opacity:.75;margin-top:12px;">Your cart is empty.</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay-screen" id="paintingOverlay" aria-hidden="true">
+  <div class="overlay-panel">
+    <div class="overlay-header">
+      <div class="overlay-title" id="paintingTitle">Painting</div>
+      <button class="overlay-close" type="button" data-close-overlay aria-label="Close">&times;</button>
+    </div>
+    <div class="overlay-body">
+      <img id="paintingImg" class="painting-modal-img" src="" alt="">
+      <div style="margin-top:12px; line-height:1.45;">
+        <p id="paintingDesc" style="margin:0 0 12px;opacity:.85;"></p>
+        <div class="actions">
+          <button class="btn primary" type="button" id="addToCartBtn">Add to cart</button>
+          <button class="btn" type="button" id="toggleFavFromModal">Add to favorites</button>
+        </div>
+        <p id="addedMsg" style="display:none;margin-top:10px;opacity:.75;">Added ✅</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

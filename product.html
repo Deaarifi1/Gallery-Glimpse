@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collections</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<script src="js/product.js"></script>
+<body>
+<div class="header">
+    <div class="logo">LOGO</div>
+
+    <div class="nav-links">
+        <div class="home nav-item"><a href="index.html">Home</a></div>
+        <div class="product nav-item"><a href="product.html">Products</a></div>
+        <div class="contact nav-item"><a href="contact.html">Contact</a></div>
+    </div>
+
+    <div class="header-icons">
+        <div class="icon heart-icon">
+            <i class="fa-regular fa-heart" id="header-wishlist-icon"></i>
+            <span id="wishlist-count" class="count-badge">0</span>
+        </div>
+        <div class="icon user-icon"> 
+            <i class="fa-regular fa-user" id="header-user-icon"></i>
+            </div> 
+        <div class="icon shopping-bag-icon">
+            <i class="fa-solid fa-bag-shopping" id="header-cart-icon"></i>
+            <span id="cart-count" class="count-badge">0</span>
+        </div>
+    </div>
+</div>
+
+    <div class="bodyproduct">
+        <div class="product-container">
+        <div class="image-gallery">
+          <div class="main-image">
+            <img
+              id="main-image"
+              src="img/the-waterlily-pond-with-the-japanese-bridge-claude-monet-canvas-print.jpg"
+              alt="Main Image"
+            >
+            <div class="navigation-arrows">
+              <button class="arrow" id="prev-arrow">&lt;</button>
+              <button class="arrow" id="next-arrow">&gt;</button>
+            </div>
+          </div>
+          <div class="thumbnails" id="thumbnails-container">
+            <img src="img/the-waterlily-pond-with-the-japanese-bridge-claude-monet-canvas-print.jpg" alt="Thumbnail 0" class="thumbnail-item">
+            <img src="img/pp (1).jpg" alt="Thumbnail 1" class="thumbnail-item">
+            <img src="img/the-waterlily-pond-with-the-japanese-bridge-claude-monet.jpg" alt="Thumbnail 2" class="thumbnail-item">
+            <img src="img/pp.jpg" alt="Thumbnail 3" class="thumbnail-item">
+            <img src="img/the-waterlily-pond-with-the-japanese-bridge-claude-monett.jpg" alt="Thumbnail 4" class="thumbnail-item">
+          </div>
+        </div>
+        <div class="product-details">
+          <h1>The Waterlily Pond with the Japanese Bridge Canvas Print</h1>
+          <div class="stars">★★★★<span>★</span></div>
+          <div class="price">45.00€</div>
+          <div class="description">
+            The Waterlily Pond with the Japanese Bridge canvas print by Claude Monet. Bring your artwork to life with the
+            texture and depth of a stretched canvas print. Your image gets printed onto one of our premium canvases and then
+            stretched on a wooden frame of 1.5" x 1.5" stretcher bars (gallery wrap) or 5/8" x 5/8" stretcher bars (museum
+            wrap). Your canvas print will be delivered to you "ready to hang" with pre-attached hanging wire, mounting
+            hooks, and nails.
+          </div>
+          <div class="additional-info">
+            <div><b>Availability:</b>In Stock</div>
+            <div><b>Categories:</b>Canvas Print</div>
+            <div><b>Tags:</b>Tag1, Tag2, Tag3</div>
+          </div>
+          <div class="actions">
+            <div class="counter">
+              <button id="decrease">-</button>
+              <input type="text" id="quantity" value="1" min="1"> <button id="increase">+</button>
+            </div>
+            <button class="add-to-cart" id="add-to-cart-button">ADD TO CART</button>
+            <div class="wishlist-button" id="product-wishlist-button">
+                 <i class="fa-regular fa-heart"></i>
+            </div>
+             <div class="info-message" id="cart-info-message"></div>
+             </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

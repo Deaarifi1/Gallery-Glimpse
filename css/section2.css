@@ -1,0 +1,32 @@
+.section2-center-text {
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    font: 600 28px Poppins;
+    margin-top: 25px;
+}
+.section2-icon-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+.section2-icon-box { 
+    text-align: center; 
+    max-width: 150px; 
+}
+.section2-icon-box img { 
+    width: 30px; 
+    height: 28px; 
+}
+.section2-bold-text { 
+    font: 600 14px Poppins; 
+    margin-top: 10px; 
+    color: #292C33; 
+}
+.section2-small-text { 
+    font: 300 10px Poppins; 
+    margin-top: 10px; 
+    color: #0B0B0B; 
+}

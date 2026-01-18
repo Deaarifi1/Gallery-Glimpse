@@ -1,0 +1,222 @@
+.bodyproduct {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #ffffff;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: white;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.image-gallery, .product-details {
+    width: 100%;
+    max-width: 600px;
+}
+.image-gallery {
+    margin-bottom: 20px;
+}
+.main-image {
+    position: relative;
+}
+.main-image img {
+    width: 100%;
+    height: auto; 
+    aspect-ratio: 1 / 1; /* We add an aspect ratio if we want all boxes to be the same, e.g. 1:1 */ 
+    object-fit: cover;
+}
+.navigation-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.thumbnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.thumbnails img {
+    width: 18%; /* Adjusted to fit 5 photos and some space*/
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+}
+/* Style for active thumbnail */
+.thumbnails img.active-thumbnail {
+    border-color: #000000;
+}
+.product-details {
+    padding-left: 20px;
+}
+.product-details h1 {
+    font: normal normal 600 20px Poppins;
+    margin-bottom: 10px;
+    letter-spacing: 0.54px;
+    color: #000000;
+}
+.stars {
+    color: gold;
+    margin-bottom: 10px;
+}
+.stars span {
+    color: lightgray;
+}
+.price {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.description {
+    font: normal normal 300 12px Poppins;
+    margin-bottom: 10px;
+    letter-spacing: 0.43px;
+    color: #393939;
+    margin-bottom: 20px;
+}
+.additional-info {
+    font-family: Poppins;
+    font-size: 12px;
+    margin-bottom: 20px;
+    letter-spacing: 0.08px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+.additional-info b {
+    display: inline-block;
+    width: 100px;
+}
+.counter {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.counter button {
+    width: 30px;
+    height: 30px;
+}
+.counter input {
+    width: 50px;
+    text-align: center;
+    height: 30px;
+}
+.actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+.add-to-cart {
+    background-color: rgb(120, 24, 24);
+    color: white;
+    border: none;
+    width: 200px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.wishlist-button {
+    width: 30px;
+    height: 30px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(69, 66, 66);
+    cursor: pointer;
+    border-radius: 5px; 
+}
+/* Heart icon style inside button - initially empty outline */
+.wishlist-button i {
+    font-size: 16px; 
+    color: black; 
+    transition: color 0.3s; 
+}
+
+    @media (min-width: 600px) {
+        .image-gallery, .product-details {
+            width: 45%;
+        }
+    }
+    @media (min-width: 900px) {
+        .product-container {
+            flex-wrap: nowrap;
+        }
+        .image-gallery {
+            width: 45%;
+        }
+        .product-details {
+            width: 55%;
+        }
+    }
+/* Adjusting the row of buttons if there is space */
+@media (min-width: 768px) {
+    .actions {
+        flex-direction: row; 
+        align-items: center; 
+    }
+    #cart-info-message {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+/* Styling for Cart Message */
+.info-message {
+    color: #0f5132;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+.info-message.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* Error/warning message style (in case it is added again) */
+.info-message.error-message {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+.header-icons .user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    padding: 0 10px; 
+}
+.header-icons .user-icon i {
+    font-size: 20px;
+    color: black;
+}
